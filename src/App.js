@@ -5,6 +5,8 @@ import Contact from './Components/Contact';
 import './App.css';
 
 function App() {
+    const proceduresList = ['Teeth Cleaning', 'Root Canal', 'Crown', 'Filling'];
+
     return (
         <BrowserRouter>
             <div className="App">
@@ -22,7 +24,12 @@ function App() {
                     </ul>
                 </nav>
                 <Route path="/" exact component={Home} />
-                <Route path="/procedures" component={Procedures} />
+                <Route
+                    path="/procedures"
+                    render={() => {
+                        return <Procedures procedures={proceduresList} />;
+                    }}
+                />
                 <Route path="/contact" component={Contact} />
             </div>
         </BrowserRouter>
