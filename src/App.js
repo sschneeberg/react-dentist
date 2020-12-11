@@ -1,4 +1,4 @@
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 import Home from './Components/Home';
 import Procedures from './Components/Procedures';
 import Contact from './Components/Contact';
@@ -11,13 +11,13 @@ function App() {
                 <nav>
                     <ul>
                         <li>
-                            <a href="/">HOME</a>
+                            <Link to="/">HOME</Link>
                         </li>
                         <li>
-                            <a href="/contact">CONTACT</a>
+                            <Link to="/contact">CONTACT</Link>
                         </li>
                         <li>
-                            <a href="/procedures">PROCEDURES</a>
+                            <Link to="/procedures">PROCEDURES</Link>
                         </li>
                     </ul>
                 </nav>
