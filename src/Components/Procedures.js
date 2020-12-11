@@ -1,12 +1,19 @@
+import { Link } from 'react-router-dom';
+
 function Procedures(props) {
-    const list = props.procedures.map((procedure) => {
-        return <li>{procedure}</li>;
+    const list = props.procedures.map((procedure, id) => {
+        return (
+            <li key={'p ' + id}>
+                {procedure.name}{' '}
+                <Link to={`/procedures/${procedure.id}`}>[details]</Link>
+            </li>
+        );
     });
     return (
-        <div>
-            This is the Procedures page, we offer:
+        <>
+            <h1>This is the Procedures page, we offer: </h1>
             <ul>{list}</ul>
-        </div>
+        </>
     );
 }
 
