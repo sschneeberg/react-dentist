@@ -10,7 +10,7 @@ function WeatherResult(props) {
             <h3>Weather for: {props.weather.name}</h3>
             <p>{props.weather.weather[0].description}</p>
             <p>
-                {temp}ºF Feels Like {feelsLike}ºF{' '}
+                Currently {temp}ºF, Feels Like {feelsLike}ºF{' '}
             </p>
             <p>{props.weather.main.humidity}% Humidity</p>
         </div>

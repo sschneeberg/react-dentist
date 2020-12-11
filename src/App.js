@@ -3,6 +3,7 @@ import Home from './Components/Home';
 import Procedures from './Components/Procedures';
 import Contact from './Components/Contact';
 import Weather from './Components/Weather';
+import Github from './Components/Github';
 import ProcedureDetails from './Components/ProcedureDetails';
 
 import './App.css';
@@ -32,6 +33,9 @@ function App() {
                         <li>
                             <Link to="/weather">WEATHER?</Link>
                         </li>
+                        <li>
+                            <Link to="/github">GITHUB???</Link>
+                        </li>
                     </ul>
                 </nav>
                 <Route path="/" exact component={Home} />
@@ -44,6 +48,7 @@ function App() {
                 />
                 <Route path="/contact" component={Contact} />
                 <Route path="/weather" component={Weather} />
+                <Route path="/github" component={Github} />
                 <Route
                     path="/procedures/:id"
                     render={(routeInfo) => {
